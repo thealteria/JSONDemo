@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(String s) { //pass thr result from above method to this method
+        protected void onPostExecute(String s) { //pass the result from above method to this method
             /* the doiInBackgroung method can't interact with UI hence we update the UI in the main thread or
              in the PostExecute thread*/
 
@@ -91,15 +91,9 @@ public class MainActivity extends AppCompatActivity {
 
                     info.setText("Main: " + main + "\n" + "\n" + "Description: "+ description);
 
-                }
-
-
-            } catch (JSONException e) {
+                } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-            super.onPostExecute(s);
-
         }
     }
 
